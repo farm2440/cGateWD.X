@@ -1,13 +1,13 @@
 MPLINK 5.01, LINKER
-Linker Map File - Created Sat Jan 31 16:13:06 2015
+Linker Map File - Created Sat Jan 31 15:39:56 2015
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                    .org_0       code   0x000000    program   0x000002
                    .cinit    romdata   0x000001    program   0x000004
-                   .org_1       code   0x000004    program   0x000078
-.config_2007_BUILD/DEFAULT/PRODUCTION/MAIN.O       code   0x002007    program   0x000002
+                   .org_1       code   0x000004    program   0x00006c
+.config_2007_BUILD/DEFAULT/DEBUG/MAIN.O       code   0x002007    program   0x000002
 
 
 
@@ -15,9 +15,9 @@ Linker Map File - Created Sat Jan 31 16:13:06 2015
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000002      
-                            0x000004    0x00003f      
+                            0x000004    0x000039      
                             0x002007    0x002007      
-            64 out of 1158 program addresses used, program memory utilization is 5%
+            58 out of 1158 program addresses used, program memory utilization is 5%
 
 
 

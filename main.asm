@@ -69,7 +69,7 @@ main
 		SELECT_BANK_0
         movlw   TIMEOUT
         movwf   timer
-        bsf     GPIO,RST
+        bcf     GPIO,RST
 
 main_loop
         bcf     GPIO,ACTIVE
@@ -97,14 +97,21 @@ decTimer
         decfsz  timer,1
         goto    main_loop
 resetDevice ;Рестарт на външното устройство
+        bsf     GPIO,RST
+        call    delay
+        call    delay
+        call    delay
+        call    delay
+        call    delay
+        call    delay
+        call    delay
+        call    delay
+        call    delay
+        call    delay
         bcf     GPIO,RST
-        call    delay
-        call    delay
-        call    delay
-        call    delay
+
         movlw   TIMEOUT
         movwf   timer
-        bsf     GPIO,RST
         goto    main_loop
 
         END

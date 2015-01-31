@@ -1,4 +1,4 @@
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  1
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0006   00A5           00039                 movwf   delay_1
 0007   30FF           00040                 movlw   255
 0008   00A6           00041                 movwf   delay_2
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  2
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -95,7 +95,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 001A   1283               M                                 bcf     STATUS,RP0
 001B   3078           00070         movlw   TIMEOUT
 001C   00A7           00071         movwf   timer
-001D   1205           00072         bcf     GPIO,RST
+001D   1605           00072         bsf     GPIO,RST
                       00073 
 001E                  00074 main_loop
 001E   1105           00075         bcf     GPIO,ACTIVE
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 002A   00A7           00090         movwf   timer
 002B   0805           00091         movfw   GPIO    
 002C   3920           00092         andlw   HBMASK
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  3
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -129,25 +129,18 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 002F   0BA7           00097         decfsz  timer,1
 0030   2???           00098         goto    main_loop
 0031                  00099 resetDevice ;Рестарт на външното устройство
-0031   1605           00100         bsf     GPIO,RST
+0031   1205           00100         bcf     GPIO,RST
 0032   2???           00101         call    delay
 0033   2???           00102         call    delay
 0034   2???           00103         call    delay
 0035   2???           00104         call    delay
-0036   2???           00105         call    delay
-0037   2???           00106         call    delay
-0038   2???           00107         call    delay
-0039   2???           00108         call    delay
-003A   2???           00109         call    delay
-003B   2???           00110         call    delay
-003C   1205           00111         bcf     GPIO,RST
-                      00112 
-003D   3078           00113         movlw   TIMEOUT
-003E   00A7           00114         movwf   timer
-003F   2???           00115         goto    main_loop
-                      00116 
-3F84                  00117         END
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  4
+0036   3078           00105         movlw   TIMEOUT
+0037   00A7           00106         movwf   timer
+0038   1605           00107         bsf     GPIO,RST
+0039   2???           00108         goto    main_loop
+                      00109 
+3F84                  00110         END
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  4
 
 
 SYMBOL TABLE
@@ -206,7 +199,7 @@ GP1                               00000001
 GP2                               00000002
 GP3                               00000003
 GP4                               00000004
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  5
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  5
 
 
 SYMBOL TABLE
@@ -265,7 +258,7 @@ PS1                               00000001
 PS2                               00000002
 PSA                               00000003
 RD                                00000000
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  6
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  6
 
 
 SYMBOL TABLE
@@ -324,7 +317,7 @@ WPU5                              00000005
 WR                                00000001
 WREN                              00000002
 WRERR                             00000003
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  7
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  7
 
 
 SYMBOL TABLE
@@ -370,6 +363,8 @@ _WDT_OFF                          00003FF7
 _WDT_ON                           00003FFF
 _XT_OSC                           00003FF9
 __12F675                          00000001
+__DEBUG                           
+__MPLAB_DEBUGGER_PK3              1
 decTimer                          0000002F
 delay                             00000005
 delay_1                           00000025
@@ -381,7 +376,7 @@ prev                              00000028
 resetDevice                       00000031
 timer                             00000027
 
-MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  16:13:06         PAGE  8
+MPASM 5.55  /HOME/SVILEN/MPLABXPROJECTS/CGAT   1-31-2015  15:39:55         PAGE  8
 
 
 
